@@ -2,7 +2,7 @@
 
 This is a README describing a big data analytics research project on price optimization. It will contain a summary of the analysis and work completed. The overall methodology is tentative and subject to change as the project progresses.
 
-## Tentative Overall methodology
+## Tentative overall methodology
 
 
 
