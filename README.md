@@ -34,41 +34,38 @@ Statistical methods such as regression, correlation, and feature transformation 
 - Quantity appears to be at least bimodal (2 peaks) or multimodal (3 peaks). Around quantity 25, 38 and 52 appear to be the most frequent occurrences for transaction sales.
 - There is a possibility this both Quantity and Price multiple peaks is due to the categories of different groups of items being grouped together.
 
-Patterns and trends
-•	The mean price is $12.47 and mean quantity is 39.93.
-•	All beverages appear to be very closely priced together.
-•	There appear to be a more densely packed number of transactions between price at $12-$13.25 and quantity of 40.
-•	Lunar New Year, National Day, and Qing Ming Festival holidays have the most sales by product.
-•	Sales transactions during school breaks are much less than sales during the school year for most products. 
-•	Burgers and coke sell more during breaks, than coffee and lemonade.
-•	Most sales happen during the week instead of the weekend.
-•	Most items sold are outdoors.
-•	Most sales transactions are for combos than individual items.
-
-## Research questions
-"How does the time of year impact price elasticity of burger café menu items?” 
-“How can burger café menu item prices be modeled by time of year?”
-“What factors influence certain beverages' sales volume and to what extent?” 
+### Patterns and trends
+- The mean price is $12.47 and mean quantity is 39.93.
+- All beverages appear to be very closely priced together.
+- There appear to be a more densely packed number of transactions between price at $12-$13.25 and quantity of 40.
+- Lunar New Year, National Day, and Qing Ming Festival holidays have the most sales by product.
+- Sales transactions during school breaks are much less than sales during the school year for most products. 
+- Burgers and coke sell more during breaks, than coffee and lemonade.
+- Most sales happen during the week instead of the weekend.
+- Most items sold are outdoors.
+- Most sales transactions are for combos than individual items.
 
 ## Applicable attributes and unusual patterns
 I converted CALENDAR_DATE to date format, and both ITEM_NAME and HOLIDAY have been converted to categories. The rest of the columns in the dataset remain integer or float data types.
 
-Outlier detection
-•	We do see quite a number of outliers for price when price > $15
-•	We do see quite a number of outliers for quantity when quantity is roughly >88 or so
-•	We can either remove the outliers now for price and quantity or transform both price and quantity and see whether that helps. We will wait to see the results of transforming.
+
+### Outlier detection
+- We do see quite a number of outliers for price when price > $15
+- We do see quite a number of outliers for quantity when quantity is roughly >88 or so
+- We can either remove the outliers now for price and quantity or transform both price and quantity and see whether that helps. We will wait to see the results of transforming.
 
 ## Research questions
-•	“How does the time of year impact price elasticity of burger café menu items?” 
-•	“How can burger café menu item prices be modeled by time of year?” 
-•	“What factors influence certain beverages' sales volume and to what extent?”
+- “How does the time of year impact price elasticity of burger café menu items?” 
+- “How can burger café menu item prices be modeled by time of year?” 
+- “What factors influence certain beverages' sales volume and to what extent?”
 
 ## Regression
-Dependent & Independent variable selection
+### Dependent & Independent variable selection
 The dependent variable (y) will be quantity. The independent variable (x) will be price along with other independent variables for optimizing price by product and time of year.
 
 ## Relationships 
 Correlation shows you how the two variables are related and the strength of the relationship between the two variables. Understanding this can help in dimensionality reduction.
+
 Most notable pairs from the correlation matrix heat maps are listed below:
 PRICE                SELL_ID               			-7.637177e-01
 SELL_CATEGORY        PRICE                 		-7.634237e-01
@@ -86,6 +83,6 @@ QUANTITY             PRICE                  		  4.453556e-01
 ## Conclusion
 
 ## References
-Javivaleiras. (n.d.). GitHub - javivaleiras/retail_price_optimization: Price optimization using price elasticity. GitHub. https://github.com/javivaleiras/retail_price_optimization
-Pratx. (2021). Price Elasticity. Kaggle. https://www.kaggle.com/code/pratx557/price-elasticity
+- Javivaleiras. (n.d.). GitHub - javivaleiras/retail_price_optimization: Price optimization using price elasticity. GitHub. https://github.com/javivaleiras/retail_price_optimization
+- Pratx. (2021). Price Elasticity. Kaggle. https://www.kaggle.com/code/pratx557/price-elasticity
 
