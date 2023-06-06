@@ -29,10 +29,10 @@ Statistical methods such as regression, correlation, and feature transformation 
 ## Descriptive statistics of the dataset
 
 Distribution
-•	Temperature appears to be bi-modal, with most sales happening somewhere around 35F, and around 80F
-•	Price appears to be at least bimodal (2 peaks) or multimodal (3 peaks). We see peaks at around $10.25, $11.50, and $12.75
-•	Quantity appears to be at least bimodal (2 peaks) or multimodal (3 peaks). Around quantity 25, 38 and 52 appear to be the most frequent occurrences for transaction sales.
-•	There is a possibility this both Quantity and Price multiple peaks is due to the categories of different groups of items being grouped together.
+Temperature appears to be bi-modal, with most sales happening somewhere around 35F, and around 80F
+Price appears to be at least bimodal (2 peaks) or multimodal (3 peaks). We see peaks at around $10.25, $11.50, and $12.75
+Quantity appears to be at least bimodal (2 peaks) or multimodal (3 peaks). Around quantity 25, 38 and 52 appear to be the most frequent occurrences for transaction sales.
+There is a possibility this both Quantity and Price multiple peaks is due to the categories of different groups of items being grouped together.
 
 Patterns and trends
 •	The mean price is $12.47 and mean quantity is 39.93.
