@@ -67,16 +67,16 @@ The dependent variable (y) will be quantity. The independent variable (x) will b
 Correlation shows you how the two variables are related and the strength of the relationship between the two variables. Understanding this can help in dimensionality reduction.
 
 Most notable pairs from the correlation matrix heat maps are listed below:
-- PRICE                SELL_ID               			-7.637177e-01
-- SELL_CATEGORY        PRICE                 		-7.634237e-01
-- SELL_CATEGORY        QUANTITY              		-7.472371e-01
-- SELL_ID              QUANTITY              		-7.463939e-01
-- SELL_ID              ITEM_ID               			-3.327415e-01
-- SELL_CATEGORY        ITEM_ID               		-3.320470e-01
-- IS_WEEKEND           QUANTITY              		-2.645138e-01
-- SELL_CATEGORY        SELL_ID                		  9.999971e-01
-- AVERAGE_TEMPERATURE    IS_OUTDOOR            	  5.497614e-01
-- QUANTITY             PRICE                  		  4.453556e-01
+- PRICE and                SELL_ID               			-7.637177e-01
+- SELL_CATEGORY and        PRICE                 		-7.634237e-01
+- SELL_CATEGORY and        QUANTITY              		-7.472371e-01
+- SELL_ID and             QUANTITY              		-7.463939e-01
+- SELL_ID and             ITEM_ID               			-3.327415e-01
+- SELL_CATEGORY and       ITEM_ID               		-3.320470e-01
+- IS_WEEKEND and          QUANTITY              		-2.645138e-01
+- SELL_CATEGORY and       SELL_ID                		  9.999971e-01
+- AVERAGE_TEMPERATURE and   IS_OUTDOOR            	  5.497614e-01
+- QUANTITY and            PRICE                  		  4.453556e-01
 
 ## Related work on the dataset and differences
 
