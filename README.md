@@ -78,6 +78,15 @@ Most notable pairs from the correlation matrix heat maps are listed below:
 - AVERAGE_TEMPERATURE and   IS_OUTDOOR            	  5.497614e-01
 - QUANTITY and            PRICE                  		  4.453556e-01
 
+## Standardization
+
+## Algorithm considerations
+
+## Comparative analysis of the models
+
+## Experimental design
+The Cross-validation technique of train-test split will be used to partition the dataset. A 70/30 split will be used.
+
 ## Related work on the dataset and differences
 
 ## Conclusion
