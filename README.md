@@ -78,17 +78,21 @@ Most notable pairs from the correlation matrix heat maps are listed below:
 - AVERAGE_TEMPERATURE and   IS_OUTDOOR            	  5.497614e-01
 - QUANTITY and            PRICE                  		  4.453556e-01
 
-## Data Transformation: Standardization
+## Data Transformation: Standardization & Algorithm Considerations
 Machine learning algorithms are best optimized when the distribution of numerical input features are shifted/scaled to a standard range (mean = 0, standard deviation = 1).  
 We will apply standardization as a pre-processing step prior to modelling. This will place the features on a similar scale. 
 This is typically done with regression models; where feature variables have differing weights attached.
 
-## Algorithm considerations
-
-## Comparative analysis of the models
-
 ## Experimental design
 The Cross-validation technique of train-test split will be used to partition the dataset. A 70/30 split will be used.
+
+## Modelling
+I encountered some issues applying the model to my training variables in box [168] on the ipynb file.
+When I applied to the dataset variables directly (not the transformed variables), the standard errors appeared are very high for all three models.
+This is an indicator that there is an issue with possibly using untransformed variables for the models.
+I will be reviewing the issues with the supervisor to investigate and resolve before finalzing model selection.
+
+## Comparative analysis of the models
 
 ## Related work on the dataset and differences
 
