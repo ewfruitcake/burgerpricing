@@ -78,7 +78,8 @@ Most notable pairs from the correlation matrix heat maps are listed below:
 - AVERAGE_TEMPERATURE and   IS_OUTDOOR            	  5.497614e-01
 - QUANTITY and            PRICE                  		  4.453556e-01
 
-## Standardization
+## Data Transformation: Standardization
+Machine learning algorithms are best optimized when the distribution of numerical input features are shifted/scaled to a standard range (mean = 0, standard deviation = 1).  We will apply standardization as a pre-processing step prior to modelling. This will place the features on a similar scale. This is typically done with regression models; where feature variables have differing weights attached.
 
 ## Algorithm considerations
 
