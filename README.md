@@ -87,12 +87,20 @@ This is typically done with regression models; where feature variables have diff
 The Cross-validation technique of train-test split will be used to partition the dataset. A 70/30 split will be used.
 
 ## Modelling
-I encountered some issues applying the model to my training variables in box [168] on the ipynb file.
-When I applied to the dataset variables directly (not the transformed variables), the standard errors appeared are very high for all three models.
-This is an indicator that there is an issue with possibly using untransformed variables for the models.
-I will be reviewing the issues with the supervisor to investigate and resolve before finalzing model selection.
+Three regression models will be applied to the data and evaluated for best fit.
+Model 1 - Linear regression model
+Model 2 - Regression tree model
+Model 3 - KNN regression model
+
+## Next steps for Final Results and Code
+Modification of hyperparameters, where applicable, to the three models to achieve the best accuracy. 
+Then, determining the best predication algorithm out of the three models & explain why (least errors or accuracy?)
+Conclude whether time of year related columns do OR do not appear to have a strong relationship to impact price elasticity. Explain why or why not.
+
+I will be reviewing the results with the supervisor to wrap-up for the Final Results and Code stage.
 
 ## Comparative analysis of the models
+TBC
 
 ## Related work on the dataset and differences
 
