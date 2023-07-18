@@ -93,18 +93,18 @@ Model 2 - Regression tree model
 Model 3 - KNN regression model
 
 ## Comparative analysis of the models
-Model 1 - Linear regression model
+Model 1 - Linear regression model.
 This model made the Condition number very large. The OLS regression model results notes stated either strong multicollinearity or other problems. 
 As a result, experimenting with different regression models by removing some independent features from the model may or may not improve the model.
 This makes it tricky to get the prediction results.
 
-Model 2 - Regression Decision Tree model
+Model 2 - Regression Decision Tree model.
 This was the most informative model from the visualization results.
 Our training data was comprised of 9 independent variables that were a combination of numeric and categorical.
 By splitting the data into a tree shape of subsets, by each independent variable, to arrive at a prediction for quantity,
 We are able to utilize each feature as it pertains to the prediction and the visualization summarized very clearly which features were the most useful based on the R^2 (the coefficient of determination) values.
 
-Model 3 - KNN regression model
+Model 3 - KNN regression model.
 The least amount of error was seen with K=2. However, it is generally recommended to have an odd number for K, so K=2 wouldn't be suitable.
 KNN predications are less stable as K reaches closer to 1 because there are less groups or points from the predicted value.
 This model was not as meaningful as model 1 or 2, because it's hyperparameters appeared problematic to improve based on the K value discussion.
