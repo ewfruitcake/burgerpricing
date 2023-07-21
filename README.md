@@ -2,7 +2,7 @@
 
 This is a README describing a big data analytics research project on price optimization depending on the time of year. It will contain a description of the work, a summary of the analysis, references and related works. 
 
-## Tentative overall methodology
+## Overall methodology
 
 ![Graph final](https://github.com/ewfruitcake/burgerpricing/assets/71989699/6387cc40-dab0-4216-9325-72dbb085a8d6)
 
