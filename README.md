@@ -6,25 +6,24 @@ This is a README describing a big data analytics research project on price optim
 
 ![Graph final](https://github.com/ewfruitcake/burgerpricing/assets/71989699/6387cc40-dab0-4216-9325-72dbb085a8d6)
 
-## Dataset
+## Abstract
+When prices increase or decrease, demand is either influenced by this change or not impacted. Herein we refer to the concept of price elasticity, referring to the extent that demand is sensitive to movements in price. The greater the price sensitivity, the more demand will shift and vice versa. This is a great topic of interest in business product pricing decisions. When price elasticity of certain products can be estimated accurately, optimal product prices will maximize profit margins at the right level of demand. Price optimization is critical to businesses in the North American fast-food restaurant industry, an industry where profit margins are tight, and fast-food options are ubiquitous. For products not sensitive to demand movements, there may be other factors influencing sales that businesses can drive insights from. A thorough analysis on the topic will involve the big data analytics themes of data mining and knowledge discovery by channeling a business dataset to guide critical business decisions and predictions. The summary of research questions that will guide this study surrounding price optimization will be:
 
-> The dataset being used for the research project consists of a Google burger café’s transactions throughout the year. The dataset is publicly available.
+- “How does the time of year impact price elasticity of burger café menu items?” 
+- “How can burger café menu item prices be modeled by time of year?” 
+- “How can beverage sales volume be modeled by time of year?” 
 
-## Introduction, justification and central topics
+Insight gained from the research questions could help a restaurant chain evaluate when to prepare promotional offers during the year and for which items. Additionally, how to better optimize pricing for their menu items. Knowledge discovery sheds light on how certain beverages are performing and why to uncover patterns that may aid in business decisions. Those decisions could include; beverage menu expansion or possibly the removal of beverage items.
 
-Price sensitivity is a great topic of interest in product pricing decisions. When price elasticity of certain products can be estimated accurately, optimal prices will maximize profit margins at the right level of demand. Price optimization is critical to businesses in the North American fast-food restaurant industry, an industry where profit margins are tight, and fast-food options are ubiquitous. 
+> The dataset that will be used for the research is publicly available and consists of a Google burger café’s transaction throughout the year. The dataset contains a variety of data attributes, ranging from date, numeric and character types.
 
-The application of data mining could help a restaurant chain evaluate when to prepare promotional offers during the year and for which items. 
-Time of year is an important driving factor that influences many price optimization decisions.
-Knowledge discovery aims to uncover patterns surrounding how certain beverages are performing, why and when. 
-The results should aid in business decisions such as beverage menu changes, including beverage menu expansion or the removal of beverage items.
-Hence, the topics of **data mining** and **knowledge discovery** are the central themes of this research project on the burger menu dataset.
+Keywords: Price optimization, price elasticity, product pricing, data mining, knowledge discovery, regression, business decisions, burger menu dataset
+
+## Statistical methods
+Statistical methods such as regression, correlation, and feature transformation will be proposed to solve the stated problems and make informed predictions.
 
 ## Programming languages and tools
 Programming languages and tools include various Python libraries to apply statistical techniques, visualization, and machine learning models to answer the guiding research questions. They will also be applied to analyze trends, patterns and distributions of the dataset. The code will be run on a Jupyter notebook file (.IPYNB), this will be attached to the GitHub repository.
-
-## Statistical methods
-Statistical methods such as regression, correlation, and feature transformation will be proposed to solve the stated problems and make informed predictions. 
 
 ## Descriptive statistics of the dataset
 
@@ -53,12 +52,6 @@ I converted CALENDAR_DATE to date format so that these would be handled better b
 - We do see quite a number of outliers for quantity when quantity is roughly >88 or so
 - We can either remove the outliers now for price and quantity or transform both price and quantity and see whether that helps. We will wait to see the results of transforming and evaluate if necessary.
 
-## Research questions
-- “How does the time of year impact price elasticity of burger café menu items?” 
-- “How can burger café menu item prices be modeled by time of year?” 
-- “How can beverage sales volume be modeled by time of year?” 
-
-## Regression
 ### Dependent & Independent variable selection
 The dependent variable (y) will be quantity. The independent variable (x) will be price along with other independent variables for optimizing price by product and time of year.
 
@@ -134,11 +127,16 @@ My problem, “How does the time of year impact price elasticity of burger café
 By investigating price elasticity by time of year using a variety of regression based alogrithms, I was able to generate models to predict quantity. I was also able to evaluate model effectiveness and stability. Futhermore, steps to model beverage sales volume by time of year gather critical insight for business decisions surrounding seasonal pricing and marketing. The different focus areas on price elasticity give a unique data mining and knowledge discovery view of the burgermenu dataset.
 
 ## Analysis limitations, critical insights on improving the work
+Outliers handling
+Normalizing data does not remove the presence of outliers in the dataset. Outliers were detected in each of the price and quantity box plots. It may be worth removing the outliers from the original dataset, and testing the models again to see if the removal of those outliers impacts model performance, and to what extent.
+
+Missing Values
+There was a large number of missing values in the HOLIDAY column. It may be worthwhile to assign a unique category to the missing values, such as NO HOLIDAY. This would impact the visualizations on items sold by HOLIDAY.
 
 ## Ethical considerations
 While the burger menu dataset does not contain information on specific demographic populations, it does contain data on various holidays in China where burger menu items are sold. If certain holidays cater more to specific demographic groups than others, prices could be set unfairly during holidays to exploit the maximum they are willing to pay (Bergen, 2021). However, it is possible to structure promotional offers during holidays that cater to specific demographics without exploitation and this should be considered. For example, if a certain holiday is popular among parents and children, and a specific burger combo (SELL_ID) is popular among kids, shifting the price too high for the combo on those days could put parents at a disadvantage. Furthermore, the pricing strategy could be viewed as exploitive. 
  
-## References of python libraries used
+## Python libraries used
 - math: https://docs.python.org/3/library/math.html
 - matplotlib: https://matplotlib.org/
 - numpy: https://numpy.org/
@@ -148,20 +146,35 @@ While the burger menu dataset does not contain information on specific demograph
 - scipy: https://docs.scipy.org/doc/scipy/tutorial/index.html#user-guide
 - statsmodels: https://www.statsmodels.org/stable/index.html
 
-## References for data prep and regression modelling
-- How to Interpret Decision Tree Regressor Model Results in Python, Scikit-Learn, Matplotlib. https://www.youtube.com/watch?
-  v=z9GDlJs1qDA&ab_channel=EvidenceN
-- How to Use the Sklearn Predict Method. https://www.sharpsightlabs.com/blog/sklearn-predict/
-- KNN. https://realpython.com/knn-python/
-- Machine Learning in Python: Building a Linear Regression Model. https://www.youtube.com/watch?v=R15LjD8aCzc&ab_channel=DataProfessor
-- Python Statistics Fundamentals: How to Describe Your Data. https://realpython.com/python-statistics/
-- Regression Tree in Python. https://data36.com/regression-tree-python-scikit-learn/
-- When and Why to Standardize Your Data. https://builtin.com/data-science/when-and-why-standardize-your-data
+## Descriptive statistics, data preperation, and regression modelling references
+- Bonthu, H. (2023). Detecting and Treating Outliers | Treating the odd one out! Analytics Vidhya. https://www.analyticsvidhya.com/blog/2021/05/detecting-and-treating-outliers-treating-the-odd-one-out/
+- Data Professor. (2020, April 2). Machine Learning in Python: Building a linear regression model [Video]. YouTube. https://www.youtube.com/watch?v=R15LjD8aCzc
+- Ebner, J. (2022, May 2). How to use the Sklearn Predict Method - Sharp Sight. Sharp Sight. https://www.sharpsightlabs.com/blog/sklearn-predict/
+- EvidenceN. (2020, December 17). How to interpret Decision Tree Regressor model results in Python, Scikit-Learn, Matplotlib [Video]. YouTube. https://www.youtube.com/watch?v=z9GDlJs1qDA
+- GeeksforGeeks. (2022). Data Visualization with Python Seaborn. GeeksforGeeks. https://www.geeksforgeeks.org/data-visualization-with-python-seaborn/
+- Jaadi, Z. (2019). When and why to standardize your data. Built In. https://builtin.com/data-science/when-and-why-standardize-your-data
+- Pandas DataFrame iloc Property. (n.d.). https://www.w3schools.com/python/pandas/ref_df_iloc.asp
+- Python, R. (2023). Python Statistics Fundamentals: How to Describe your Data. realpython.com. https://realpython.com/python-statistics/
+- Ujhelyi, T. (2022, December 8). Regression tree in Python using Scikit-Learn (Code your Decision Tree #1). Data36. https://data36.com/regression-tree-python-scikit-learn/
+- Zach. (2021). How to Make Heatmaps with Seaborn (With Examples). Statology. https://www.statology.org/seaborn-heatmap/
+- Zach. (2022). How to perform OLS regression in Python (With example). Statology. https://www.statology.org/ols-regression-python/
 
-## References of related works on the dataset
+## Abstract, Literature Review and Related Works references
+- Anoriega. (2021, June 14). What Is Data Mining: Definition, Examples, Tools, and Techniques (For Beginners) | Georgia Tech Boot Camps. Georgia Tech Boot Camps. https://bootcamp.pe.gatech.edu/blog/what-is-data-mining/
+- Bergen, M. E. (2021, March 26). How AI Can Help Companies Set Prices More Ethically. Harvard Business Review. https://hbr.org/2021/03/how-ai-can-help-companies-set-prices-more-ethically
+- Biggs, Sun, & Ettl. (2021). Model Distillation for Revenue Optimization: Interpretable Personalized Pricing. https://arxiv.org/pdf/2007.01903.pdf
+- Biggs, Sun, & Ettl. (2021). Model Distillation for Revenue Optimization: Interpretable Personalized Pricing. https://arxiv.org/pdf/2007.01903.pdf
+- Demand of Burger King - Managerial Economic. (n.d.). Scribd. https://www.scribd.com/document/98069652/Demand-of-Burger-King-Managerial-Economic#
+- Devedzic, V. (2001). KNOWLEDGE DISCOVERY AND DATA MINING IN DATABASES. In World Scientific Publishing Company eBooks (pp. 615–637). https://doi.org/10.1142/9789812389718_0025
+- Dorota-Owczarek. (2022, December 1). Why Do You Need Dynamic Pricing Optimization? Machine Learning in Novel Pricing Strategies. nexocode. https://nexocode.com/blog/posts/pricing-optimization-machine-learning/
+- Graddy, K. (2006). Markets: The Fulton Fish Market. Journal of Economic Perspectives, 20(2), 207–220. https://doi.org/10.1257/jep.20.2.207
+- Harvard Business School, Ferreira, K. J., Alex Lee, B. H., & Simchi-Levi, D. (n.d.). Analytics for an Online Retailer: Demand Forecasting and Price Optimization. https://www.hbs.edu/ris/Publication%20Files/kris%20Analytics%20for%20an%20Online%20Retailer_6ef5f3e6-48e7-4923-a2d4-607d3a3d943c.pdf
+- Hunt, P. (2021, December 11). What Should That Burger Cost? - Heated. Medium. https://heated.medium.com/what-should-that-burger-cost-cooking-up-a-high-impact-pricing-strategy-for-restaurants-c63c0463e4d8
 - Javivaleiras. (n.d.). GitHub - javivaleiras/retail_price_optimization: Price optimization using price elasticity. GitHub. https://github.com/javivaleiras/retail_price_optimization
+Ito, S., & Fujimaki, R. (2017). Optimization Beyond Prediction. https://doi.org/10.1145/3097983.3098188
+- Kharwal, A. (2021). Price Elasticity of Demand using Python. Thecleverprogrammer. https://thecleverprogrammer.com/2021/09/14/price-elasticity-of-demand-using-python/
+- Li, S. (2018, December 6). Price Elasticity of Demand, Statistical Modeling with Python. Medium. https://towardsdatascience.com/calculating-price-elasticity-of-demand-statistical-modeling-with-python-6adb2fa7824d
+- MattBirch. (n.d.). GitHub - MattBirch42/Fulton_Fish_IV_in_Python: This little mini project is intended to show why we might need instrumental variables (IV) to estimate demand elasticities, and to demonstrate how to implement IV in Python. GitHub. https://github.com/MattBirch42/Fulton_Fish_IV_in_Python/tree/main
 - Pratx. (2021). Price Elasticity. Kaggle. https://www.kaggle.com/code/pratx557/price-elasticity
 
-## Other references
-- Bergen, M. E. (2021, March 26). How AI Can Help Companies Set Prices More Ethically. Harvard Business Review. https://hbr.org/2021/03/how-ai-can-help-companies-set-prices-more-ethically
 
