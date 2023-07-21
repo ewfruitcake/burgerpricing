@@ -29,10 +29,10 @@ Statistical methods such as regression, correlation, and feature transformation 
 ## Descriptive statistics of the dataset
 
 ### Distribution
-- Temperature appears to be bi-modal, with most sales happening somewhere around 35F, and around 80F
-- Price appears to be at least bimodal (2 peaks) or multimodal (3 peaks). We see peaks at around $10.25, $11.50, and $12.75
-- Quantity appears to be at least bimodal (2 peaks) or multimodal (3 peaks). Around quantity 25, 38 and 52 appear to be the most frequent occurrences for transaction sales.
-- There is a possibility this both Quantity and Price multiple peaks is due to the categories of different groups of items being grouped together.
+- Assessing the distribution of Temperature; during which burger sales occur, we see a bi-modal distribution, with most sales happening somewhere around 35F, and around 80F
+- Price appears to be at least bimodal (2 peaks) or multimodal (3 peaks) in the distribution. We see peaks at around $10.25, $11.50, and $12.75
+- Quantity appears to be at least bimodal (2 peaks) or multimodal (3 peaks). Sales quantities of 25, 38 and 52 appear to be the most frequent occurrences for transactions. Perhaps these are bulk burger orders.
+- It's possibile that both Quantity and Price's multiple peaks is due to categories of menu items being grouped together.
 
 ### Patterns and trends
 - The mean price is $12.47 and mean quantity is 39.93.
@@ -42,17 +42,16 @@ Statistical methods such as regression, correlation, and feature transformation 
 - Sales transactions during school breaks are much less than sales during the school year for most products. 
 - Burgers and coke sell more during breaks, than coffee and lemonade.
 - Most sales happen during the week instead of the weekend.
-- Most items sold are outdoors.
+- Most items sold are outdoors. Presumably, the burger cafe has an indoor area.
 - Most sales transactions are for combos than individual items.
 
 ## Applicable attributes and unusual patterns
-I converted CALENDAR_DATE to date format, and both ITEM_NAME and HOLIDAY have been converted to categories. The rest of the columns in the dataset remain integer or float data types.
-
+I converted CALENDAR_DATE to date format so that these would be handled better by python's data science packages. Both ITEM_NAME and HOLIDAY have been converted to categories. The rest of the columns in the dataset remain integer or float data types.
 
 ### Outlier detection
 - We do see quite a number of outliers for price when price > $15
 - We do see quite a number of outliers for quantity when quantity is roughly >88 or so
-- We can either remove the outliers now for price and quantity or transform both price and quantity and see whether that helps. We will wait to see the results of transforming.
+- We can either remove the outliers now for price and quantity or transform both price and quantity and see whether that helps. We will wait to see the results of transforming and evaluate if necessary.
 
 ## Research questions
 - “How does the time of year impact price elasticity of burger café menu items?” 
@@ -64,10 +63,10 @@ I converted CALENDAR_DATE to date format, and both ITEM_NAME and HOLIDAY have be
 The dependent variable (y) will be quantity. The independent variable (x) will be price along with other independent variables for optimizing price by product and time of year.
 
 ## Relationships 
-Correlation shows you how the two variables are related and the strength of the relationship between the two variables. Understanding this can help in dimensionality reduction.
+Correlation represents the strength of the relationship between two variables. 1 being strong, 0 being weak. Understanding this can help in dimensionality reduction.
 
 Most notable pairs from the correlation matrix heat maps are listed below:
-- PRICE and                SELL_ID               			-7.637177e-01
+- PRICE and                SELL_ID               			-7.637177e-01 ~ -0.7637177
 - SELL_CATEGORY and        PRICE                 		-7.634237e-01
 - SELL_CATEGORY and        QUANTITY              		-7.472371e-01
 - SELL_ID and             QUANTITY              		-7.463939e-01
@@ -80,11 +79,11 @@ Most notable pairs from the correlation matrix heat maps are listed below:
 
 ## Data Transformation: Standardization & Algorithm Considerations
 Machine learning algorithms are best optimized when the distribution of numerical input features are shifted/scaled to a standard range (mean = 0, standard deviation = 1).  
-We will apply standardization as a pre-processing step prior to modelling. This will place the features on a similar scale. 
 This is typically done with regression models; where feature variables have differing weights attached.
+We will apply standardization as a pre-processing step prior to modelling. This will place the features on a similar scale. 
 
 ## Experimental design
-The Cross-validation technique of train-test split will be used to partition the dataset. A 70/30 split will be used.
+The Cross-validation technique of train-test split will be used to partition the dataset. A 70/30 split will be deemed appropriate, with the training data serving the majority.
 
 ## Modelling
 Three regression models will be applied to the data and evaluated for best fit.
@@ -94,20 +93,15 @@ Model 3 - KNN regression model
 
 ## Comparative analysis of the models
 Model 1 - Linear regression model.
-This model made the Condition number very large. The OLS regression model results notes stated either strong multicollinearity or other problems. 
-As a result, experimenting with different regression models by removing some independent features from the model may or may not improve the model.
-This makes it tricky to get the prediction results.
+This model made the Condition number very large on the OLS regression model results. The results notes stated either strong multicollinearity or other problems were present. As a result, experimenting with different regression models by removing some independent features from the model may or may not improve the model. This makes it tricky to get reliable prediction results.
 
 Model 2 - Regression Decision Tree model.
-This was the most informative model from the visualization results.
+This was the most informative model from the visualization results. The visualization summarized very clearly which features were the most useful based on the R^2 (the coefficient of determination) values.
 Our training data was comprised of 9 independent variables that were a combination of numeric and categorical.
-By splitting the data into a tree shape of subsets, by each independent variable, to arrive at a prediction for quantity,
-We are able to utilize each feature as it pertains to the prediction and the visualization summarized very clearly which features were the most useful based on the R^2 (the coefficient of determination) values.
+By splitting the data into a tree shape where we evaluate predictions of quantity by each independent variable, we are able to utilize each feature as it pertains to the prediction, no matter the type of data in an effective manner.
 
 Model 3 - KNN regression model.
-The least amount of error was seen with K=2. However, it is generally recommended to have an odd number for K, so K=2 wouldn't be suitable.
-KNN predications are less stable as K reaches closer to 1 because there are less groups or points from the predicted value.
-This model was not as meaningful as model 1 or 2, because it's hyperparameters appeared problematic to improve based on the K value discussion.
+The least amount of error was seen with K=2. KNN predications are less stable as K reaches closer to 1 because there are less groups or points from the predicted value, which is why it is generally recommended to have an odd number for K, and K=2 wouldn't be suitable or stable enough to have an effective KNN model in this case. Overall, this model was not as meaningful as model 1 or 2, because it's hyperparameters appeared problematic to improve based on the K value issue.
 
 ## Conclusion
 The best model would be Model 2 - Regression Decision Tree model based on the comparative analysis results to use for modeling time of year predictors for the burger cafe dataset to estimate quantity.
@@ -117,12 +111,12 @@ Model 1 made it very clear that we can reject the null hypothesis, but did not g
 Model 2 had the best restults to provide insights on the variable relationships as predictors of quantity.
 
 From the decision tree results, the most important features are PRICE, SELL_ID, and IS_WEEKEND. 
-AVERAGE_TEMPERATURE has some importance on predicting quantity, but nowhere as much as the most important features.
-IS_OUTDOOR, YEAR and IS_SCHOOLBREAK have very little impact on predicting quantity.
-ITEM_ID & SELL_CATEGORY have no notable impact.
+AVERAGE_TEMPERATURE has some importance on predicting quantity, but no where as much as the most important features.
+IS_OUTDOOR, YEAR and IS_SCHOOLBREAK have very little importance on predicting quantity.
+ITEM_ID & SELL_CATEGORY have no notable importance.
 
-We can conclude that it is possible for quantity to be predicted using price and time of year features, however with a level of importance that is either "moderate" or "low" depending on the time of year feature (IS_WEEKEND, AVERAGE_TEMPERATURE, IS_OUTDOOR, IS_SCHOOLBREAK) tested in the decision tree model.
-We can say that the same features would influence beverage sales volume to the extent that they are important as predictors.
+We can conclude that it is possible for quantity to be predicted using price and time of year features, however the level of importance is either "moderate" or "low" depending on the time of year feature (IS_WEEKEND, AVERAGE_TEMPERATURE, IS_OUTDOOR, IS_SCHOOLBREAK) tested in the decision tree model.
+We can say that the same time of year features would influence beverage sales volume to the extent that they are important as predictors.
 
 ## References
 - Javivaleiras. (n.d.). GitHub - javivaleiras/retail_price_optimization: Price optimization using price elasticity. GitHub. https://github.com/javivaleiras/retail_price_optimization
