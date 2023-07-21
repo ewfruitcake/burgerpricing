@@ -103,7 +103,9 @@ By splitting the data into a tree shape where we evaluate predictions of quantit
 Model 3 - KNN regression model.
 The least amount of error was seen with K=2. KNN predications are less stable as K reaches closer to 1 because there are less groups or points from the predicted value, which is why it is generally recommended to have an odd number for K, and K=2 wouldn't be suitable or stable enough to have an effective KNN model in this case. Overall, this model was not as meaningful as model 1 or 2, because it's hyperparameters appeared problematic to improve based on the K value issue.
 
-## Conclusion - Summary of models and research efforts
+### Conclusion
+
+## Concluding on models
 The best model would be Model 2 - Regression Decision Tree model. This is based on the comparative analysis results for modeling time of year predictors to estimate quantity.
 
 However, using both Models 1 & 2 for different purposes can be beneficial for a more holistic analysis.
@@ -113,14 +115,14 @@ From the decision tree results, the most important features are PRICE, SELL_ID, 
 AVERAGE_TEMPERATURE has some importance on predicting quantity, but no where as much as the most important features.
 IS_OUTDOOR, YEAR and IS_SCHOOLBREAK have very little importance on predicting quantity.
 ITEM_ID & SELL_CATEGORY have no notable importance.
-
+## Concluding on research questions
 We can conclude that it is possible for quantity to be predicted using price and time of year features, however the level of importance is either "moderate" or "low" depending on the time of year feature (IS_WEEKEND, AVERAGE_TEMPERATURE, IS_OUTDOOR, IS_SCHOOLBREAK) tested in the decision tree model.
 We can say that the same time of year features would influence beverage sales volume to the extent that they are important as predictors, but that would be a pre-mature conclusion without discussion of how this could be modeled and measured.
 Beverage sales volumes be modeled by time of time of year (since there are only 3 beverages).
 One approach would be to make a slight modification to the dataset by setting up 3 new columns labelled, "IS_COFFEE", "IS_COKE" and "IS_LEMONADE". The values for the columns would be populated based on the "ITEM_NAME" column values (an existing column that describes the name of items sold in text). To set this up, for "IS_COFFEE", we would check if "ITEM_NAME" has coffee, if true, then the value would be 1, else it would be 0. 
 We can then feed the new columns in our model to make predictions for specific beverages. Hyperparameters should be re-assessed for model efficiency.
 
-## Comparison of research against related works
+## Comparison of research against related-works
 Other researchers have developed pricing models using the same dataset. 
 
 One researcher states the problem as, “The objective is to set, for a specific day, the optimal price of a product, maximizing profits.” (Javivaleiras, n.d.). Another states, “As a data scientist, it is our task to figure out the optimal prices to set for these items.” (Pratx, 2021). 
