@@ -153,9 +153,11 @@ By investigating price elasticity by time of year using a variety of regression 
 
 ### Analysis Limitations, Critical Insights on Improving the Work
 Outliers handling
+
 Normalizing data does not remove the presence of outliers in the dataset. Outliers were detected in each of the price and quantity box plots. It may be worth removing the outliers from the original dataset, and testing the models again to see if the removal of those outliers impacts model performance, and to what extent.
 
 Missing Values
+
 There was a large number of missing values in the HOLIDAY column. It may be worthwhile to assign a unique category to the missing values, such as NO HOLIDAY. This would impact the visualizations on items sold by HOLIDAY.
 
 ### Ethical Considerations
