@@ -135,7 +135,7 @@ By investigating price elasticity and variability in time of year using a variet
 
 ## References of python libraries used
 - math: https://docs.python.org/3/library/math.html
-- matplotlib: Python plotting library https://matplotlib.org/
+- matplotlib: https://matplotlib.org/
 - numpy: https://numpy.org/
 - pandas: https://pandas.pydata.org/
 - seaborn: https://seaborn.pydata.org/index.html#
