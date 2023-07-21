@@ -16,7 +16,7 @@ Price sensitivity is a great topic of interest in product pricing decisions. Whe
 
 The application of data mining could help a restaurant chain evaluate when to prepare promotional offers during the year and for which items. 
 Time of year is an important driving factor that influences many price optimization decisions.
-Knowledge discovery aims uncover patterns surrounding how certain beverages are performing, why and when. 
+Knowledge discovery aims to uncover patterns surrounding how certain beverages are performing, why and when. 
 The results should aid in business decisions such as beverage menu changes, including beverage menu expansion or the removal of beverage items.
 Hence, the topics of **data mining** and **knowledge discovery** are the central themes of this research project on the burger menu dataset.
 
