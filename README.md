@@ -103,7 +103,7 @@ By splitting the data into a tree shape where we evaluate predictions of quantit
 Model 3 - KNN regression model.
 The least amount of error was seen with K=2. KNN predications are less stable as K reaches closer to 1 because there are less groups or points from the predicted value, which is why it is generally recommended to have an odd number for K, and K=2 wouldn't be suitable or stable enough to have an effective KNN model in this case. Overall, this model was not as meaningful as model 1 or 2, because it's hyperparameters appeared problematic to improve based on the K value issue.
 
-### Conclusion
+## Conclusion
 
 ## Concluding on models
 The best model would be Model 2 - Regression Decision Tree model. This is based on the comparative analysis results for modeling time of year predictors to estimate quantity.
