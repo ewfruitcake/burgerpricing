@@ -133,6 +133,11 @@ My problem, “How does the time of year impact price elasticity of burger café
 
 By investigating price elasticity by time of year using a variety of regression based alogrithms, I was able to generate models to predict quantity. I was also able to evaluate model effectiveness and stability. Futhermore, steps to model beverage sales volume by time of year gather critical insight for business decisions surrounding seasonal pricing and marketing. The different focus areas on price elasticity give a unique data mining and knowledge discovery view of the burgermenu dataset.
 
+## Analysis limitations, critical insights on improving the work
+
+## Ethical considerations
+While the burger menu dataset does not contain information on specific demographic populations, it does contain data on various holidays in China where burger menu items are sold. If certain holidays cater more to specific demographic groups than others, prices could be set unfairly during holidays to exploit the maximum they are willing to pay (Bergen, 2021). However, it is possible to structure promotional offers during holidays that cater to specific demographics without exploitation and this should be considered. For example, if a certain holiday is popular among parents and children, and a specific burger combo (SELL_ID) is popular among kids, shifting the price too high for the combo on those days could put parents at a disadvantage. Furthermore, the pricing strategy could be viewed as exploitive. 
+ 
 ## References of python libraries used
 - math: https://docs.python.org/3/library/math.html
 - matplotlib: https://matplotlib.org/
@@ -156,4 +161,7 @@ By investigating price elasticity by time of year using a variety of regression 
 ## References of related works on the dataset
 - Javivaleiras. (n.d.). GitHub - javivaleiras/retail_price_optimization: Price optimization using price elasticity. GitHub. https://github.com/javivaleiras/retail_price_optimization
 - Pratx. (2021). Price Elasticity. Kaggle. https://www.kaggle.com/code/pratx557/price-elasticity
+
+## Other references
+- Bergen, M. E. (2021, March 26). How AI Can Help Companies Set Prices More Ethically. Harvard Business Review. https://hbr.org/2021/03/how-ai-can-help-companies-set-prices-more-ethically
 
