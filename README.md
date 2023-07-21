@@ -46,7 +46,7 @@ You may access the GitHub repository at https://github.com/ewfruitcake/burgerpri
 
 The models to be used for price optimization depending on time of year will be regression-based due to the nature of the datatypes we are working with and the problems to be solved. 
 
-The steps are summarized in the graphical below starting with Initial Analysis as the first step.
+The steps are summarized in the graph below starting with Initial Analysis as the first step.
 
 ![Graph final](https://github.com/ewfruitcake/burgerpricing/assets/71989699/6387cc40-dab0-4216-9325-72dbb085a8d6)
 
