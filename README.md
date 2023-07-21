@@ -87,9 +87,9 @@ The Cross-validation technique of train-test split will be used to partition the
 
 ## Modelling
 Three regression models will be applied to the data and evaluated for best fit.
-Model 1 - Linear regression model
-Model 2 - Regression tree model
-Model 3 - KNN regression model
+- Model 1 - Linear regression model
+- Model 2 - Regression tree model
+- Model 3 - KNN regression model
 
 ## Comparative analysis of the models
 Model 1 - Linear regression model.
