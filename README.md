@@ -120,8 +120,8 @@ We can conclude that it is possible for quantity to be predicted using price and
 
 We could say that the same time of year features would influence beverage sales volume to the extent that they are important as predictors, but that would be a pre-mature conclusion without discussion of how this could be modeled and measured.
 
-To predict beverage sales volumes by time of time of year (since there are only 3 beverages), one approach would be to make a slight modification to the dataset by setting up 3 new columns labelled, "IS_COFFEE", "IS_COKE" and "IS_LEMONADE". The values for the columns would be populated based on the "ITEM_NAME" column values (an existing column that describes the name of items sold in text). To set this up, for "IS_COFFEE", we would check if "ITEM_NAME" has coffee, if true, then the value would be 1, else it would be 0. 
-We can then feed the new columns in our model to make predictions for specific beverages. Hyperparameters should be re-assessed for model efficiency.
+To predict beverage sales volumes by time of time of year (since there are only 3 beverages), one approach would be to make a slight modification to the dataset by setting up 3 new columns labelled, "IS_COFFEE", "IS_COKE" and "IS_LEMONADE". The values for the columns would be populated based on the "ITEM_NAME" column values (an existing column that describes the name of items sold in text). To set this up, for "IS_COFFEE", we would check if "ITEM_NAME" has coffee, if true, then the value would be 1, else it would be 0. Repeating the same steps for "IS_COKE" and "IS_LEMONADE".
+We can then feed the new columns in our model to make predictions for specific beverages. Hyperparameters of the model should be re-assessed for model efficiency.
 
 ## Comparison of research against related-works
 Other researchers have developed pricing models using the same dataset. 
