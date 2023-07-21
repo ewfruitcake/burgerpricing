@@ -1,6 +1,6 @@
 # Price elasticity of a burger menu
 
-This is a README describing a big data analytics research project on price optimization. It will contain a description of the work, a summary of the analysis, references and related works. 
+This is a README describing a big data analytics research project on price optimization depending on the time of year. It will contain a description of the work, a summary of the analysis, references and related works. 
 
 ## Tentative overall methodology
 
@@ -12,11 +12,11 @@ This is a README describing a big data analytics research project on price optim
 
 ## Introduction, justification and central topics
 
-Price sensitivity is a great topic of interest in product pricing decisions. When price elasticity of certain products can be estimated accurately, optimal prices will maximize profit margins at the right level of demand. Price optimization is critical to businesses in the North American fast-food restaurant industry, an industry where profit margins are tight, and fast-food options are ubiquitous.
+Price sensitivity is a great topic of interest in product pricing decisions. When price elasticity of certain products can be estimated accurately, optimal prices will maximize profit margins at the right level of demand. Price optimization is critical to businesses in the North American fast-food restaurant industry, an industry where profit margins are tight, and fast-food options are ubiquitous. 
 
 The application of data mining could help a restaurant chain evaluate when to prepare promotional offers during the year and for which items. 
-Data mining can be used to better optimize pricing for menu items. 
-Knowledge discovery will uncover patterns surrounding how certain beverages are performing and why. 
+Time of year is an important driving factor that influences many price optimization decisions.
+Knowledge discovery aims uncover patterns surrounding how certain beverages are performing, why and when. 
 The results should aid in business decisions such as beverage menu changes, including beverage menu expansion or the removal of beverage items.
 Hence, the topics of **data mining** and **knowledge discovery** are the central themes of this research project on the burger menu dataset.
 
@@ -56,7 +56,7 @@ I converted CALENDAR_DATE to date format so that these would be handled better b
 ## Research questions
 - “How does the time of year impact price elasticity of burger café menu items?” 
 - “How can burger café menu item prices be modeled by time of year?” 
-- “How can beverages' sales volume be modeled by time of year?” 
+- “How can beverage sales volume be modeled by time of year?” 
 
 ## Regression
 ### Dependent & Independent variable selection
