@@ -93,7 +93,7 @@ Three regression models will be applied to the data and evaluated for best fit.
 
 ## Comparative analysis of the models
 Model 1 - Linear regression model.
-This model made the "Condition" number very large on the OLS regression model results. The results notes stated either strong multicollinearity or other problems were present. As a result, experimenting with different regression models by removing some independent features from the model may or may not improve the model. Overall, these factors make it difficult to obtain reliable prediction results.
+This model made the "Condition" number very large on the OLS regression model results. The results notes stated either strong multicollinearity or other problems were present. As a result, experimenting with different regression models by removing some independent features from the model may or may not improve the model. Overall, these factors make it difficult to obtain reliable prediction results. You may reference the "Evaluation of OLS Regression Results" after .IPYNB file box [89] for details.
 
 Model 2 - Regression Decision Tree model.
 This was the most informative model from the visualization results. The visualization summarized very clearly which features were the most useful based on the R^2 (the coefficient of determination) values.
@@ -115,8 +115,9 @@ From the decision tree results, the most important features are PRICE, SELL_ID, 
 AVERAGE_TEMPERATURE has some importance on predicting quantity, but no where as much as the most important features.
 IS_OUTDOOR, YEAR and IS_SCHOOLBREAK have very little importance on predicting quantity.
 ITEM_ID & SELL_CATEGORY have no notable importance.
+
 ## Concluding on research questions
-We can conclude that it is possible for quantity to be predicted using price and time of year features, however the level of importance or strength of prediction is either "moderate" or "low" depending on the time of year feature (IS_WEEKEND, AVERAGE_TEMPERATURE, IS_OUTDOOR, IS_SCHOOLBREAK) as tested in Model 2 - Regression Decision Tree model (reference R^2 visualization).
+We can conclude that it is possible for quantity to be predicted using price and time of year features, however the level of importance or strength of prediction is either "moderate" or "low" depending on the time of year feature (IS_WEEKEND, AVERAGE_TEMPERATURE, IS_OUTDOOR, IS_SCHOOLBREAK). You may reference the .IPYNB file box [101] "Decision Tree Model Regression - Important Features for the R^2 visualization" for details.
 
 We could say that the same time of year features would influence beverage sales volume to the extent that they are important as predictors, but that would be a pre-mature conclusion without discussion of how this could be modeled and measured.
 
