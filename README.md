@@ -1,6 +1,6 @@
 # Price elasticity of a burger menu
 
-This is a README describing a big data analytics research project on price optimization. It will contain a description of the work, a summary of the analysis, and references. 
+This is a README describing a big data analytics research project on price optimization. It will contain a description of the work, a summary of the analysis, references and related works. 
 
 ## Tentative overall methodology
 
