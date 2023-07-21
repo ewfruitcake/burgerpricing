@@ -56,7 +56,7 @@ I converted CALENDAR_DATE to date format so that these would be handled better b
 ## Research questions
 - “How does the time of year impact price elasticity of burger café menu items?” 
 - “How can burger café menu item prices be modeled by time of year?” 
-- “What factors influence certain beverages' sales volume and to what extent?”
+- “How can beverages' sales volume be modeled by time of year?” 
 
 ## Regression
 ### Dependent & Independent variable selection
@@ -117,8 +117,37 @@ ITEM_ID & SELL_CATEGORY have no notable importance.
 
 We can conclude that it is possible for quantity to be predicted using price and time of year features, however the level of importance is either "moderate" or "low" depending on the time of year feature (IS_WEEKEND, AVERAGE_TEMPERATURE, IS_OUTDOOR, IS_SCHOOLBREAK) tested in the decision tree model.
 We can say that the same time of year features would influence beverage sales volume to the extent that they are important as predictors.
+As for how beverages' sales volumes be modeled by time of time of year, since there are only 3 beverages, one approach would be to make a slight modification to the dataset by setting up new columns "IS_COFFEE", "IS_COKE" and "IS_LEMONADE". The values for the columns would be populated based on the "ITEM_NAME" column values. For example, for "IS_COFFEE", where "ITEM_NAME" has coffee, the value would be 1, else it would be 0. 
+We can then feed the new columns in our model to make predictions for specific beverages. Hyperparameters should be re-assessed for model efficiency.
 
-## References
+## Comparison against related works
+Other researchers have developed pricing models using the same dataset. 
+One researcher states the problem as, “The objective is to set, for a specific day, the optimal price of a product, maximizing profits.” (Javivaleiras, n.d.). Another states, “As a data scientist, it is our task to figure out the optimal prices to set for these items.” (Pratx, 2021). 
+While I am choosing to perform a similar study on price elasticity for the burger café dataset as these researchers, my research focuses on how the time of year related features are related to optimization. My problem, “How does the time of year impact price elasticity of burger café menu items?” analyzes how price optimization varies by product on factors such as temperature, school breaks, weekends and outdoor sales. My follow-up questions are, “How can burger café menu item prices be modeled by time of year?" explores different types of regression models, and finally, “How can beverages' sales volume be modeled by time of year?” sheds proposes how the data can be structured to have a model predict in volume by beverage type based on time of year. 
+
+By investigating price elasticity and variability in time of year using a variety of regression based alogrithms, I was able to model to predict quantity specific to business pricing strategies. Time of year factors and their role in influencing certain beverages' sales volume and to what extent gathers unique insight for critical business decisions surrounding seasonal pricing and marketing. Due to the different focus questions, my research provides a different insight into how price elasticity can be measured. The different focus areas provide depth on what has happened before from a data mining and knowledge discovery view.
+
+## References of libraries used
+- math: https://docs.python.org/3/library/math.html
+- matplotlib: Python plotting library https://matplotlib.org/
+- numpy: https://numpy.org/
+- pandas: https://pandas.pydata.org/
+- seaborn: https://seaborn.pydata.org/index.html#
+- scikit-learn: https://scikit-learn.org/stable/index.html
+- scipy: https://docs.scipy.org/doc/scipy/tutorial/index.html#user-guide
+- statsmodels: https://www.statsmodels.org/stable/index.html
+
+## References for data prep and regression modelling
+- How to Interpret Decision Tree Regressor Model Results in Python, Scikit-Learn, Matplotlib. https://www.youtube.com/watch?
+  v=z9GDlJs1qDA&ab_channel=EvidenceN
+- How to Use the Sklearn Predict Method. https://www.sharpsightlabs.com/blog/sklearn-predict/
+- KNN. https://realpython.com/knn-python/
+- Machine Learning in Python: Building a Linear Regression Model. https://www.youtube.com/watch?v=R15LjD8aCzc&ab_channel=DataProfessor
+- Python Statistics Fundamentals: How to Describe Your Data. https://realpython.com/python-statistics/
+- Regression Tree in Python. https://data36.com/regression-tree-python-scikit-learn/
+- When and Why to Standardize Your Data. https://builtin.com/data-science/when-and-why-standardize-your-data
+
+## References of related works on the dataset
 - Javivaleiras. (n.d.). GitHub - javivaleiras/retail_price_optimization: Price optimization using price elasticity. GitHub. https://github.com/javivaleiras/retail_price_optimization
 - Pratx. (2021). Price Elasticity. Kaggle. https://www.kaggle.com/code/pratx557/price-elasticity
 
