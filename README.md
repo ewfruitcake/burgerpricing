@@ -4,7 +4,7 @@ This is a README describing a big data analytics research project on price optim
 
 ## Tentative overall methodology
 
-![Graph final](https://github.com/ewfruitcake/burgerpricing/assets/71989699/15de6752-021a-4015-a858-d8fa12839579)
+![Graph final](https://github.com/ewfruitcake/burgerpricing/assets/71989699/6387cc40-dab0-4216-9325-72dbb085a8d6)
 
 ## Dataset
 
