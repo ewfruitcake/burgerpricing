@@ -21,7 +21,7 @@ The results should aid in business decisions such as beverage menu changes, incl
 Hence, the topics of **data mining** and **knowledge discovery** are the central themes of this research project on the burger menu dataset.
 
 ## Programming languages and tools
-Programming languages and tools include various Python to apply statistical techniques and visualization to answer the guiding research questions to analyze trends, patterns and distributions in the dataset.
+Programming languages and tools include various Python libraries to apply statistical techniques, visualization, and machine learning models to answer the guiding research questions. They will also be applied to analyze trends, patterns and distributions of the dataset. The code will be run on a Jupyter notebook file (.IPYNB), this will be attached to the GitHub repository.
 
 ## Statistical methods
 Statistical methods such as regression, correlation, and feature transformation will be proposed to solve the stated problems and make informed predictions. 
@@ -93,7 +93,7 @@ Three regression models will be applied to the data and evaluated for best fit.
 
 ## Comparative analysis of the models
 Model 1 - Linear regression model.
-This model made the Condition number very large on the OLS regression model results. The results notes stated either strong multicollinearity or other problems were present. As a result, experimenting with different regression models by removing some independent features from the model may or may not improve the model. This makes it tricky to get reliable prediction results.
+This model made the "Condition" number very large on the OLS regression model results. The results notes stated either strong multicollinearity or other problems were present. As a result, experimenting with different regression models by removing some independent features from the model may or may not improve the model. Overall, these factors make it difficult to obtain reliable prediction results.
 
 Model 2 - Regression Decision Tree model.
 This was the most informative model from the visualization results. The visualization summarized very clearly which features were the most useful based on the R^2 (the coefficient of determination) values.
@@ -103,12 +103,11 @@ By splitting the data into a tree shape where we evaluate predictions of quantit
 Model 3 - KNN regression model.
 The least amount of error was seen with K=2. KNN predications are less stable as K reaches closer to 1 because there are less groups or points from the predicted value, which is why it is generally recommended to have an odd number for K, and K=2 wouldn't be suitable or stable enough to have an effective KNN model in this case. Overall, this model was not as meaningful as model 1 or 2, because it's hyperparameters appeared problematic to improve based on the K value issue.
 
-## Conclusion
-The best model would be Model 2 - Regression Decision Tree model based on the comparative analysis results to use for modeling time of year predictors for the burger cafe dataset to estimate quantity.
+## Conclusion - Summary of models and research efforts
+The best model would be Model 2 - Regression Decision Tree model. This is based on the comparative analysis results for modeling time of year predictors to estimate quantity.
 
-However, using both Models 1 & 2 for different purposes is useful to get a more holistic analysis.
-Model 1 made it very clear that we can reject the null hypothesis, but did not give us confidence over the multicolinearity issues or other numeric problems.
-Model 2 had the best restults to provide insights on the variable relationships as predictors of quantity.
+However, using both Models 1 & 2 for different purposes can be beneficial for a more holistic analysis.
+To explain, Model 1 made it very clear that we can reject the null hypothesis, but did not give us confidence over the multicolinearity issues or other numeric problems. Whereas, Model 2 had the best restults to provide insights on the variable relationships as predictors of quantity.
 
 From the decision tree results, the most important features are PRICE, SELL_ID, and IS_WEEKEND. 
 AVERAGE_TEMPERATURE has some importance on predicting quantity, but no where as much as the most important features.
@@ -116,16 +115,19 @@ IS_OUTDOOR, YEAR and IS_SCHOOLBREAK have very little importance on predicting qu
 ITEM_ID & SELL_CATEGORY have no notable importance.
 
 We can conclude that it is possible for quantity to be predicted using price and time of year features, however the level of importance is either "moderate" or "low" depending on the time of year feature (IS_WEEKEND, AVERAGE_TEMPERATURE, IS_OUTDOOR, IS_SCHOOLBREAK) tested in the decision tree model.
-We can say that the same time of year features would influence beverage sales volume to the extent that they are important as predictors.
-As for how beverages' sales volumes be modeled by time of time of year, since there are only 3 beverages, one approach would be to make a slight modification to the dataset by setting up new columns "IS_COFFEE", "IS_COKE" and "IS_LEMONADE". The values for the columns would be populated based on the "ITEM_NAME" column values. For example, for "IS_COFFEE", where "ITEM_NAME" has coffee, the value would be 1, else it would be 0. 
+We can say that the same time of year features would influence beverage sales volume to the extent that they are important as predictors, but that would be a pre-mature conclusion without discussion of how this could be modeled and measured.
+Beverage sales volumes be modeled by time of time of year (since there are only 3 beverages).
+One approach would be to make a slight modification to the dataset by setting up 3 new columns labelled, "IS_COFFEE", "IS_COKE" and "IS_LEMONADE". The values for the columns would be populated based on the "ITEM_NAME" column values (an existing column that describes the name of items sold in text). To set this up, for "IS_COFFEE", we would check if "ITEM_NAME" has coffee, if true, then the value would be 1, else it would be 0. 
 We can then feed the new columns in our model to make predictions for specific beverages. Hyperparameters should be re-assessed for model efficiency.
 
-## Comparison against related works
+## Comparison of research against related works
 Other researchers have developed pricing models using the same dataset. 
-One researcher states the problem as, “The objective is to set, for a specific day, the optimal price of a product, maximizing profits.” (Javivaleiras, n.d.). Another states, “As a data scientist, it is our task to figure out the optimal prices to set for these items.” (Pratx, 2021). 
-While I am choosing to perform a similar study on price elasticity for the burger café dataset as these researchers, my research focuses on how the time of year related features are related to optimization. My problem, “How does the time of year impact price elasticity of burger café menu items?” analyzes how price optimization varies by product on factors such as temperature, school breaks, weekends and outdoor sales. My follow-up questions are, “How can burger café menu item prices be modeled by time of year?" explores different types of regression models, and finally, “How can beverages' sales volume be modeled by time of year?” sheds proposes how the data can be structured to have a model predict in volume by beverage type based on time of year. 
 
-By investigating price elasticity and variability in time of year using a variety of regression based alogrithms, I was able to model to predict quantity specific to business pricing strategies. Time of year factors and their role in influencing certain beverages' sales volume and to what extent gathers unique insight for critical business decisions surrounding seasonal pricing and marketing. Due to the different focus questions, my research provides a different insight into how price elasticity can be measured. The different focus areas provide depth on what has happened before from a data mining and knowledge discovery view.
+One researcher states the problem as, “The objective is to set, for a specific day, the optimal price of a product, maximizing profits.” (Javivaleiras, n.d.). Another states, “As a data scientist, it is our task to figure out the optimal prices to set for these items.” (Pratx, 2021). 
+While I had choosen a similar study on price elasticity for the burger café dataset as these researchers, my research focused on how the time of year related features are related to optimization. 
+My problem, “How does the time of year impact price elasticity of burger café menu items?” analyzes how price optimization varies by product on factors such as temperature, school breaks, weekends and outdoor sales. My follow-up questions, “Hsow can burger café menu item prices be modeled by time of year?" explores different types of regression models, and, “How can beverages' sales volume be modeled by time of year?” proposes how the data can be structured to have a model predict volume by beverage type that comprises relevant time of year features. 
+
+By investigating price elasticity and variability in time of year using a variety of regression based alogrithms, I was able to generate models to predict quantity specific to business pricing strategies and evaluate their effectiveness and stability. Time of year factors and their role in influencing certain beverages' sales volume gather critical insight for business decisions surrounding seasonal pricing and marketing. The different focus areas on price elasticity give a unique data mining and knowledge discovery view of the burgermenu dataset.
 
 ## References of python libraries used
 - math: https://docs.python.org/3/library/math.html
