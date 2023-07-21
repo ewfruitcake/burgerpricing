@@ -42,7 +42,11 @@ The number of publicly available research articles on price elasticity using thi
 Upon researching price optimization using data mining and knowledge discovery topics, I found price optimization and price elasticity projects on different datasets. There was one where the author specified their intent to optimize pricing, but their efforts took data on pricing and fitted it to demand using linear regression (Li, 2018). Another researcher tackles how to calculate price elasticity using Python but not price optimization (Kharwal, 2021). With price optimization, the first step is determining price elasticity, but more work needs to be done to come to a price optimization conclusion. Throughout researching what exists on the topic of price optimization, a common analytics technique is the use of regression (Li, 2018; Hunt, 2021; Javivaleiras, n.d.; Pratx, 2023; Demand of Burger King - Managerial Economic, n.d.; Graddy, 2006; MattBirch, n.d.). Sklearn is a popular python library that is used for creating test and training sets and formulating prediction models (Javivaleiras, n.d.; Pratx, 2023). Several authors explicitly state the method of Ordinary Least Squares (OLS) Estimation to fit price data to demand (Li, 2018; Graddy, 2006). Some take it a step further to indicate that OLS findings should not be relied on and Instrumental Variables (IV) should be taken into account to determine the optimal price (Graddy, 2006; MattBirch, n.d.). It appears that Graddy (2006) prepared research on this topic and MattBirch (n.d.) followed to replicate the study using data tools.
 
 ## Overall Methodology
-You may access the GitHub repository at https://github.com/ewfruitcake/burgerpricing where all the project files will be stored, including the dataset .csv files, license, README and Jupyter Notebook (IPYNB) file for the code and results. The models to be used for price optimization depending on time of year will be regression-based. 
+You may access the GitHub repository at https://github.com/ewfruitcake/burgerpricing where all the project files will be stored, including the dataset .csv files, license, README and Jupyter Notebook (IPYNB) file for the code and results. 
+
+The models to be used for price optimization depending on time of year will be regression-based due to the nature of the datatypes we are working with and the problems to be solved. 
+
+The steps are summarized in a graphical format.
 
 ![Graph final](https://github.com/ewfruitcake/burgerpricing/assets/71989699/6387cc40-dab0-4216-9325-72dbb085a8d6)
 
