@@ -1,7 +1,7 @@
-# Price elasticity of a burger menu
+# Price Elasticity of a Burger Menu
 This is a README describing a big data analytics research project on price optimization depending on the time of year. It will contain a description of the work, a summary of the analysis, references and related works. 
 
-## Overall methodology
+## Overall Methodology
 You may access the GitHub repository at https://github.com/ewfruitcake/burgerpricing where all the project files will be stored, including the dataset .csv files, license, README and Jupyter Notebook (IPYNB) file for the code and results. The models to be used for price optimization depending on time of year will be regression-based. 
 
 ![Graph final](https://github.com/ewfruitcake/burgerpricing/assets/71989699/6387cc40-dab0-4216-9325-72dbb085a8d6)
@@ -19,10 +19,10 @@ The dataset that will be used for the research is publicly available and consist
 
 Keywords: Price optimization, price elasticity, product pricing, data mining, knowledge discovery, regression, business decisions, burger menu dataset
 
-## Statistical methods
+## Statistical Methods
 Statistical methods such as regression, correlation, and feature transformation will be proposed to solve the stated problems and make informed predictions.
 
-## Programming languages and tools
+## Programming Languages and Tools
 Programming languages and tools include various Python libraries to apply statistical techniques, visualization, and machine learning models to answer the guiding research questions. They will also be applied to analyze trends, patterns and distributions of the dataset. The code will be run on a Jupyter notebook file (.IPYNB), this will be attached to the GitHub repository.
 
 ## Literature Review
@@ -46,7 +46,7 @@ The number of publicly available research articles on price elasticity using thi
 
 Upon researching price optimization using data mining and knowledge discovery topics, I found price optimization and price elasticity projects on different datasets. There was one where the author specified their intent to optimize pricing, but their efforts took data on pricing and fitted it to demand using linear regression (Li, 2018). Another researcher tackles how to calculate price elasticity using Python but not price optimization (Kharwal, 2021). With price optimization, the first step is determining price elasticity, but more work needs to be done to come to a price optimization conclusion. Throughout researching what exists on the topic of price optimization, a common analytics technique is the use of regression (Li, 2018; Hunt, 2021; Javivaleiras, n.d.; Pratx, 2023; Demand of Burger King - Managerial Economic, n.d.; Graddy, 2006; MattBirch, n.d.). Sklearn is a popular python library that is used for creating test and training sets and formulating prediction models (Javivaleiras, n.d.; Pratx, 2023). Several authors explicitly state the method of Ordinary Least Squares (OLS) Estimation to fit price data to demand (Li, 2018; Graddy, 2006). Some take it a step further to indicate that OLS findings should not be relied on and Instrumental Variables (IV) should be taken into account to determine the optimal price (Graddy, 2006; MattBirch, n.d.). It appears that Graddy (2006) prepared research on this topic and MattBirch (n.d.) followed to replicate the study using data tools.
 
-## Descriptive statistics of the dataset
+## Descriptive Statistics of the Dataset
 
 ### Distribution
 - Assessing the distribution of Temperature; during which burger sales occur, we see a bi-modal distribution, with most sales happening somewhere around 35F, and around 80F
@@ -54,7 +54,7 @@ Upon researching price optimization using data mining and knowledge discovery to
 - Quantity appears to be at least bimodal (2 peaks) or multimodal (3 peaks). Sales quantities of 25, 38 and 52 appear to be the most frequent occurrences for transactions. Perhaps these are bulk burger orders.
 - It's possibile that both Quantity and Price's multiple peaks is due to categories of menu items being grouped together.
 
-### Patterns and trends
+### Patterns and Trends
 - The mean price is $12.47 and mean quantity is 39.93.
 - All beverages appear to be very closely priced together.
 - There appear to be a more densely packed number of transactions between price at $12-$13.25 and quantity of 40.
@@ -65,15 +65,15 @@ Upon researching price optimization using data mining and knowledge discovery to
 - Most items sold are outdoors. Presumably, the burger cafe has an indoor area.
 - Most sales transactions are for combos than individual items.
 
-## Applicable attributes and unusual patterns
+## Applicable Attributes and Uusual Patterns
 I converted CALENDAR_DATE to date format so that these would be handled better by python's data science packages. Both ITEM_NAME and HOLIDAY have been converted to categories. The rest of the columns in the dataset remain integer or float data types.
 
-### Outlier detection
+### Outlier Detection
 - We do see quite a number of outliers for price when price > $15
 - We do see quite a number of outliers for quantity when quantity is roughly >88 or so
 - We can either remove the outliers now for price and quantity or transform both price and quantity and see whether that helps. We will wait to see the results of transforming and evaluate if necessary.
 
-### Dependent & Independent variable selection
+### Dependent & Independent Variable Selection
 The dependent variable (y) will be quantity. The independent variable (x) will be price along with other independent variables for optimizing price by product and time of year.
 
 ## Relationships 
@@ -96,7 +96,7 @@ Machine learning algorithms are best optimized when the distribution of numerica
 This is typically done with regression models; where feature variables have differing weights attached.
 We will apply standardization as a pre-processing step prior to modelling. This will place the features on a similar scale. 
 
-## Experimental design
+## Experimental Design
 The Cross-validation technique of train-test split will be used to partition the dataset. A 70/30 split will be deemed appropriate, with the training data serving the majority.
 
 ## Modelling
@@ -105,7 +105,7 @@ Three regression models will be applied to the data and evaluated for best fit.
 - Model 2 - Regression tree model
 - Model 3 - KNN regression model
 
-## Comparative analysis of the models
+## Comparative Analysis of the Proposed Models
 Model 1 - Linear regression model.
 This model made the "Condition" number very large on the OLS regression model results. The results notes stated either strong multicollinearity or other problems were present. As a result, experimenting with different regression models by removing some independent features from the model may or may not improve the model. Overall, these factors make it difficult to obtain reliable prediction results. You may reference the "Evaluation of OLS Regression Results" after .IPYNB file box [89] for details.
 
@@ -117,9 +117,7 @@ By splitting the data into a tree shape where we evaluate predictions of quantit
 Model 3 - KNN regression model.
 The least amount of error was seen with K=2. KNN predictions are less stable as K approaches 1 because there are less groups or points from the predicted value, which is why it is generally recommended to have an odd number for K, and K=2 wouldn't be suitable or stable enough to have an effective KNN model in this case. Overall, this model was not as meaningful as model 1 or 2, because it's hyperparameters appeared problematic to improve based on the K value issue.
 
-## Conclusion
-
-## Concluding on models
+## Concluding on Models
 The best model would be Model 2 - Regression Decision Tree model. This is based on the comparative analysis results for modeling time of year predictors to estimate quantity.
 
 However, using both Models 1 & 2 for different purposes can be beneficial for a more holistic analysis.
@@ -130,7 +128,7 @@ AVERAGE_TEMPERATURE has some importance on predicting quantity, but no where as 
 IS_OUTDOOR, YEAR and IS_SCHOOLBREAK have very little importance on predicting quantity.
 ITEM_ID & SELL_CATEGORY have no notable importance.
 
-## Concluding on research questions
+## Concluding on Research Questions
 We can conclude that it is possible for quantity to be predicted using price and time of year features, however the level of importance or strength of prediction is either "moderate" or "low" depending on the time of year feature (IS_WEEKEND, AVERAGE_TEMPERATURE, IS_OUTDOOR, IS_SCHOOLBREAK). You may reference the .IPYNB file box [101] "Decision Tree Model Regression - Important Features for the R^2 visualization" for details.
 
 We could say that the same time of year features would influence beverage sales volume to the extent that they are important as predictors, but that would be a pre-mature conclusion without discussion of how this could be modeled and measured.
@@ -138,7 +136,7 @@ We could say that the same time of year features would influence beverage sales 
 To predict beverage sales volumes by time of time of year (since there are only 3 beverages), one approach would be to make a slight modification to the dataset by setting up 3 new columns labelled, "IS_COFFEE", "IS_COKE" and "IS_LEMONADE". The values for the columns would be populated based on the "ITEM_NAME" column values (an existing column that describes the name of items sold in text). To set this up, for "IS_COFFEE", we would check if "ITEM_NAME" has coffee, if true, then the value would be 1, else it would be 0. Repeating the same steps for "IS_COKE" and "IS_LEMONADE".
 We can then feed the new columns in our model to make predictions for specific beverages. Hyperparameters of the model should be re-assessed for model efficiency.
 
-## Comparison of research against related-works
+## Comparison of Research against Related-Works
 Other researchers have developed pricing models using the same dataset. 
 
 One researcher states the problem as, “The objective is to set, for a specific day, the optimal price of a product, maximizing profits.” (Javivaleiras, n.d.). Another states, “As a data scientist, it is our task to figure out the optimal prices to set for these items.” (Pratx, 2021). 
@@ -147,17 +145,19 @@ My problem, “How does the time of year impact price elasticity of burger café
 
 By investigating price elasticity by time of year using a variety of regression based alogrithms, I was able to generate models to predict quantity. I was also able to evaluate model effectiveness and stability. Futhermore, steps to model beverage sales volume by time of year gather critical insight for business decisions surrounding seasonal pricing and marketing. The different focus areas on price elasticity give a unique data mining and knowledge discovery view of the burgermenu dataset.
 
-## Analysis limitations, critical insights on improving the work
+## Analysis Limitations, Critical Insights on Improving the Work
 Outliers handling
 Normalizing data does not remove the presence of outliers in the dataset. Outliers were detected in each of the price and quantity box plots. It may be worth removing the outliers from the original dataset, and testing the models again to see if the removal of those outliers impacts model performance, and to what extent.
 
 Missing Values
 There was a large number of missing values in the HOLIDAY column. It may be worthwhile to assign a unique category to the missing values, such as NO HOLIDAY. This would impact the visualizations on items sold by HOLIDAY.
 
-## Ethical considerations
+## Ethical Considerations
 While the burger menu dataset does not contain information on specific demographic populations, it does contain data on various holidays in China where burger menu items are sold. If certain holidays cater more to specific demographic groups than others, prices could be set unfairly during holidays to exploit the maximum they are willing to pay (Bergen, 2021). However, it is possible to structure promotional offers during holidays that cater to specific demographics without exploitation and this should be considered. For example, if a certain holiday is popular among parents and children, and a specific burger combo (SELL_ID) is popular among kids, shifting the price too high for the combo on those days could put parents at a disadvantage. Furthermore, the pricing strategy could be viewed as exploitive. 
- 
-## Python libraries used
+
+## References
+
+## Citing Python Libraries Used
 - math: https://docs.python.org/3/library/math.html
 - matplotlib: https://matplotlib.org/
 - numpy: https://numpy.org/
@@ -167,7 +167,7 @@ While the burger menu dataset does not contain information on specific demograph
 - scipy: https://docs.scipy.org/doc/scipy/tutorial/index.html#user-guide
 - statsmodels: https://www.statsmodels.org/stable/index.html
 
-## Descriptive statistics, data preperation, and regression modelling references
+## Descriptive Statistics, Data Preperation, and Regression Modelling References
 - Bonthu, H. (2023). Detecting and Treating Outliers | Treating the odd one out! Analytics Vidhya. https://www.analyticsvidhya.com/blog/2021/05/detecting-and-treating-outliers-treating-the-odd-one-out/
 - Data Professor. (2020, April 2). Machine Learning in Python: Building a linear regression model [Video]. YouTube. https://www.youtube.com/watch?v=R15LjD8aCzc
 - Ebner, J. (2022, May 2). How to use the Sklearn Predict Method - Sharp Sight. Sharp Sight. https://www.sharpsightlabs.com/blog/sklearn-predict/
@@ -180,7 +180,7 @@ While the burger menu dataset does not contain information on specific demograph
 - Zach. (2021). How to Make Heatmaps with Seaborn (With Examples). Statology. https://www.statology.org/seaborn-heatmap/
 - Zach. (2022). How to perform OLS regression in Python (With example). Statology. https://www.statology.org/ols-regression-python/
 
-## Abstract, Literature Review and Related Works references
+## Abstract, Literature Review and Related Works References
 - Anoriega. (2021, June 14). What Is Data Mining: Definition, Examples, Tools, and Techniques (For Beginners) | Georgia Tech Boot Camps. Georgia Tech Boot Camps. https://bootcamp.pe.gatech.edu/blog/what-is-data-mining/
 - Bergen, M. E. (2021, March 26). How AI Can Help Companies Set Prices More Ethically. Harvard Business Review. https://hbr.org/2021/03/how-ai-can-help-companies-set-prices-more-ethically
 - Biggs, Sun, & Ettl. (2021). Model Distillation for Revenue Optimization: Interpretable Personalized Pricing. https://arxiv.org/pdf/2007.01903.pdf
