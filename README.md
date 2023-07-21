@@ -153,7 +153,7 @@ Missing Values
 There was a large number of missing values in the HOLIDAY column. It may be worthwhile to assign a unique category to the missing values, such as NO HOLIDAY. This would impact the visualizations on items sold by HOLIDAY.
 
 ## Ethical Considerations
-While the burger menu dataset does not contain information on specific demographic populations, it does contain data on various holidays in China where burger menu items are sold. If certain holidays cater more to specific demographic groups than others, prices could be set unfairly during holidays to exploit the maximum they are willing to pay (Bergen, 2021). However, it is possible to structure promotional offers during holidays that cater to specific demographics without exploitation and this should be considered. For example, if a certain holiday is popular among parents and children, and a specific burger combo (SELL_ID) is popular among kids, shifting the price too high for the combo on those days could put parents at a disadvantage. Furthermore, the pricing strategy could be viewed as exploitive. 
+While the burger menu dataset does not contain information on specific demographic populations, it does contain data on various holidays in China where burger menu items are sold. If certain holidays cater more to specific demographic groups than others, prices should not be set unfairly during holidays to exploit the maximum they are willing to pay (Bergen, 2021). For example, if a certain holiday is popular among parents and children, and a specific burger combo (SELL_ID) is popular among kids, shifting the price too high for the combo on those days could put parents at a disadvantage. Such pricing strategies could be viewed as exploitive. 
 
 ## References
 
