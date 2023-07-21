@@ -15,7 +15,7 @@ When prices increase or decrease, demand is either influenced by this change or 
 
 Insight gained from the research questions could help a restaurant chain evaluate when to prepare promotional offers during the year and for which items. Additionally, how to better optimize pricing for their menu items. Knowledge discovery sheds light on how certain beverages are performing and why to uncover patterns that may aid in business decisions. Those decisions could include; beverage menu expansion or possibly the removal of beverage items.
 
-> The dataset that will be used for the research is publicly available and consists of a Google burger café’s transaction throughout the year. The dataset contains a variety of data attributes, ranging from date, numeric and character types.
+The dataset that will be used for the research is publicly available and consists of a Google burger café’s transaction throughout the year. The dataset contains a variety of data attributes, ranging from date, numeric and character types.
 
 Keywords: Price optimization, price elasticity, product pricing, data mining, knowledge discovery, regression, business decisions, burger menu dataset
 
