@@ -1,8 +1,8 @@
 # Price elasticity of a burger menu
-
 This is a README describing a big data analytics research project on price optimization depending on the time of year. It will contain a description of the work, a summary of the analysis, references and related works. 
 
 ## Overall methodology
+You may access the GitHub repository at https://github.com/ewfruitcake/burgerpricing where all the project files will be stored, including the dataset .csv files, license, README and Jupyter Notebook (IPYNB) file for the code and results. The models to be used for price optimization depending on time of year will be regression-based. 
 
 ![Graph final](https://github.com/ewfruitcake/burgerpricing/assets/71989699/6387cc40-dab0-4216-9325-72dbb085a8d6)
 
