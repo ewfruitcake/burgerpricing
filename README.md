@@ -127,7 +127,7 @@ While I am choosing to perform a similar study on price elasticity for the burge
 
 By investigating price elasticity and variability in time of year using a variety of regression based alogrithms, I was able to model to predict quantity specific to business pricing strategies. Time of year factors and their role in influencing certain beverages' sales volume and to what extent gathers unique insight for critical business decisions surrounding seasonal pricing and marketing. Due to the different focus questions, my research provides a different insight into how price elasticity can be measured. The different focus areas provide depth on what has happened before from a data mining and knowledge discovery view.
 
-## References of libraries used
+## References of python libraries used
 - math: https://docs.python.org/3/library/math.html
 - matplotlib: Python plotting library https://matplotlib.org/
 - numpy: https://numpy.org/
