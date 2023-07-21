@@ -101,7 +101,7 @@ Our training data was comprised of 9 independent variables that were a combinati
 By splitting the data into a tree shape where we evaluate predictions of quantity by each independent variable, we are able to utilize each feature as it pertains to the prediction, no matter the type of data in an effective manner.
 
 Model 3 - KNN regression model.
-The least amount of error was seen with K=2. KNN predications are less stable as K reaches closer to 1 because there are less groups or points from the predicted value, which is why it is generally recommended to have an odd number for K, and K=2 wouldn't be suitable or stable enough to have an effective KNN model in this case. Overall, this model was not as meaningful as model 1 or 2, because it's hyperparameters appeared problematic to improve based on the K value issue.
+The least amount of error was seen with K=2. KNN predictions are less stable as K approaches 1 because there are less groups or points from the predicted value, which is why it is generally recommended to have an odd number for K, and K=2 wouldn't be suitable or stable enough to have an effective KNN model in this case. Overall, this model was not as meaningful as model 1 or 2, because it's hyperparameters appeared problematic to improve based on the K value issue.
 
 ## Conclusion
 
