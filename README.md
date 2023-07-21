@@ -1,10 +1,10 @@
 # Price elasticity of a burger menu
 
-This is a README describing a big data analytics research project on price optimization. It will contain a summary of the analysis and work completed. 
+This is a README describing a big data analytics research project on price optimization. It will contain a description of the work, a summary of the analysis, and references. 
 
 ## Tentative overall methodology
 
-![image](https://github.com/ewfruitcake/burgerpricing/assets/71989699/6ce6fa39-a800-4356-a478-3a9670de3da2)
+![Graph final](https://github.com/ewfruitcake/burgerpricing/assets/71989699/15de6752-021a-4015-a858-d8fa12839579)
 
 ## Dataset
 
