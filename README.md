@@ -12,7 +12,7 @@ Insight gained from the research questions could help a restaurant chain evaluat
 
 The dataset that will be used for the research is publicly available and consists of a Google burger café’s transaction throughout the year. The dataset contains a variety of data attributes, ranging from date, numeric and character types.
 
-Keywords: Price optimization, price elasticity, product pricing, data mining, knowledge discovery, regression, business decisions, burger menu dataset
+> Keywords: Price optimization, price elasticity, product pricing, data mining, knowledge discovery, regression, business decisions, burger menu dataset
 
 ### Statistical Methods
 Statistical methods such as regression, correlation, and feature transformation will be proposed to solve the stated problems and make informed predictions.
